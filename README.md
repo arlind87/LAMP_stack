@@ -23,7 +23,7 @@ https://www.vagrantup.com/downloads.html
 To perform this task you will need to clone this repo and just run the script "AllinOne.sh" in the repository folder.
 
 ```
-1. git clone https://github.com/sroutier/Laravel-Enterprise-Starter-Kit.git -b task_server_provision_automation
+1. git clone https://github.com/arlind87/LAMP_stack.git -b task_server_provision_automation
 2. cd LAMP_stack
 3. ./AllinOne.sh
 ```
