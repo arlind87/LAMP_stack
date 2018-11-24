@@ -9,8 +9,8 @@ TO be assumed that there is 1 load balancer , 5 web servers, and 3 database serv
 Based on the provided Info we have 8 servers in Total. For DB servers I will assume we have 1 Master + 2 Slaves. Also for better HA I have added a HAproxy in front of the MySQL server so that in case there is a replication lag it can remove one of the slaves.
 
 
-                                                      HL Diagram
-                                                  -----------------
+                                                  HL Diagram
+                                               -----------------
 
 				                  -----------------
 					          | Load Balancer |
