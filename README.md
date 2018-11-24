@@ -71,7 +71,7 @@ Prerequisites:
 	- System metrics and logs should be checked and compared with metrics before the upgrade in order to observe any anomaly.
 
 	Order of Upgrade:
-        - 5 Web Servers
+	- 5 Web Servers
 	- 3 DB Servers
 
 First we start by upgrading one Web Server using the above two tools. If everything works as expected we than proceed by running the needed checks to make sure that behavior is as per our expectations.
