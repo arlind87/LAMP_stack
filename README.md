@@ -60,7 +60,7 @@ Prerequisites:
 	- We should plan what checks should be performed after the upgrade
 	- We should decide what order of servers to upgrade
 
-        Backup to be considered:
+	Backup to be considered:
 	- File-system backup:  A full-server snapshot backup is a complete file-system backup that preserves your entire server from a specific point in time
 	- Database dump:  Maybe a SQL dump or something similar is better that will get a human-readable file of SQL commands, which can be imported to any other server running the same database type.
 
@@ -70,7 +70,7 @@ Prerequisites:
 	- Check that there is no impact in MySQL availability, and replication works as expected
 	- System metrics and logs should be checked and compared with metrics before the upgrade in order to observe any anomaly.
 
-        Order of Upgrade:
+	Order of Upgrade:
         - 5 Web Servers
 	- 3 DB Servers
 
