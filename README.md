@@ -9,34 +9,34 @@ TO be assumed that there is 1 load balancer , 5 web servers, and 3 database serv
 Based on the provided Info we have 8 servers in Total. For DB servers I will assume we have 1 Master + 2 Slaves. Also for better HA I have added a HAproxy in front of the MySQL server so that in case there is a replication lag it can remove one of the slaves.
 
 
-                                            HL Diagram
-                                          -----------------
+                                                      HL Diagram
+                                                  -----------------
 
-												                  -----------------
-					                                | Load Balancer |
-											                    -----------------
-													                        |
-										                              |
-					---------------------------------------------------------------------------------                                               |                  |                    |                   |                   |					
-          |                  |                    |                   |                   |
-    --------------     --------------      --------------      --------------      --------------
-    | Web Server |     | Web Server |      | Web Server |      | Web Server |      | Web Server |
-		--------------     --------------      --------------      --------------      --------------
-			    |                  |                    |                   |                   |
-					|		               |                    |                   |                   |
-					---------------------------------------------------------------------------------
-					                                        |
-					                       Write    -----------------    Read
-									          |-------------|    HA Proxy   |------------|
-									          |			        -----------------            |
-									          |                     | Read               |
-							       	-------------         -------------         -------------
-						      		| DB Server |---------| DB Server |         | DB Server |
-							       	-------------   	  -------------         -------------
-                            | Master             Slave                 | Slave
-                            |                                          |
-								         	  --------------------------------------------
-									                            Master/Slave
+				                  -----------------
+					          | Load Balancer |
+                                                  -----------------
+						          |
+		                                          |
+	          ---------------------------------------------------------------------------------                                                       |                  |                    |                   |                   |					
+                  |                  |                    |                   |                   |
+           --------------     --------------      --------------      --------------      --------------
+           | Web Server |     | Web Server |      | Web Server |      | Web Server |      | Web Server |
+	   --------------     --------------      --------------      --------------      --------------
+                  |                  |                    |                   |                   |
+		  |		     |                    |                   |                   |
+                  ---------------------------------------------------------------------------------
+				                          |
+		                          Write    -----------------    Read
+                                     |-------------|    HA Proxy   |------------|
+                                     |             -----------------            |
+                                     |                     | Read               |
+		               -------------         -------------         -------------
+			       | DB Server |---------| DB Server |         | DB Server |
+			       -------------         -------------         -------------
+                                     | Master             Slave                 | Slave
+                                     |                                          |
+                                     --------------------------------------------
+	                                               Master/Slave
 
 
 
@@ -70,8 +70,8 @@ Prerequisites:
 	- Check that there is no impact in MySQL availability, and replication works as expected
 	- System metrics and logs should be checked and compared with metrics before the upgrade in order to observe any anomaly.
 
-	Order of Upgrade:
-  - 5 Web Servers
+Order of Upgrade:
+        - 5 Web Servers
 	- 3 DB Servers
 
 First we start by upgrading one Web Server using the above two tools. If everything works as expected we than proceed by running the needed checks to make sure that behavior is as per our expectations.
@@ -96,6 +96,7 @@ Prerequisite Before the Upgrade
 	- Prepare a contingency plan in case there is any major issue present after the upgrade
 
 Regarding the upgrade process of MySQL DB there is a tool "mysql_upgrade" that handles system tables upgrades, which is very helpful during the upgrade.
+
 ###### Note: Upgrading from MySQL 5.5 to MySQL 5.7 requires to upgrade every table that have TIME, DATETIME, and TIMESTAMP columns, in order to add support for fractional seconds precision
 
 We first do the Upgrade with one of the Slave MySQL servers. After Upgrade finishes successfully including all the necessary checks we than proceed by upgrading the other slave DB Server.
