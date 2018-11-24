@@ -24,7 +24,7 @@ To perform this task you will need to clone this repo and just run the script "A
 
 ```
 1. git clone https://github.com/arlind87/LAMP_stack.git -b task_server_provision_automation
-2. cd LAMP_stack
+2. cd v1.0
 3. ./AllinOne.sh
 ```
 By default the vagrant Box will be build using virtualbox.
