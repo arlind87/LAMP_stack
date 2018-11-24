@@ -26,7 +26,7 @@ cd task_server_provision_automation
 ./AllinOne.sh
 ```
 By default the vagrant Box will be build using virtualbox.
-If you want to change the virtualization provider to hyperv just make add to the vagrant up command in "AllinOne.sh" below line:
+If you want to change the virtualization provider to hyperv just add to the vagrant up command in "AllinOne.sh" script below line:
 ```
 --provider hyperv
 ```
