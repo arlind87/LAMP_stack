@@ -83,7 +83,7 @@ After the upgrade finishes successfully we proceed with the same checks and furt
 We check different DB metrics and if after 2 days of monitoring everything works as expected we than switch this DB server role to master and upgrade the other two DB servers (we make sure to save the last transaction ID from the Master MySQL server after switching to Slave).
 After the upgrade finishes for the other 2 DB servers we than return the master role back to its original MySQL server.
 
-###### Note: We should keep an eye specially on metrics and logs that have a reoccurring pattern on a daily or weekly basis. Those might be an indication of a possible issue in the system that needs to be checked.
+##### Note: We should keep an eye specially on metrics and logs that have a reoccurring pattern on a daily or weekly basis. Those might be an indication of a possible issue in the system that needs to be checked.
 
 ##### 1.2 MySQL Upgrade
 
@@ -97,7 +97,7 @@ Prerequisite Before the Upgrade
 
 Regarding the upgrade process of MySQL DB there is a tool "mysql_upgrade" that handles system tables upgrades, which is very helpful during the upgrade.
 
-###### Note: Upgrading from MySQL 5.5 to MySQL 5.7 requires to upgrade every table that have TIME, DATETIME, and TIMESTAMP columns, in order to add support for fractional seconds precision
+##### Note: Upgrading from MySQL 5.5 to MySQL 5.7 requires to upgrade every table that have TIME, DATETIME, and TIMESTAMP columns, in order to add support for fractional seconds precision
 
 We first do the Upgrade with one of the Slave MySQL servers. After Upgrade finishes successfully including all the necessary checks we than proceed by upgrading the other slave DB Server.
 In the second Slave DB node since we already have a running DB node in version 5.7, we just use a backup-restore solution similar to "innobackupex" in order to make the restore process much faster and than upgrading the tables via a mysql_upgrade which can make the process very lengthy if there are lots of data to be restored.
