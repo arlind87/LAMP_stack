@@ -14,12 +14,12 @@ After deploying the scripts a new CentOS7 VM will be created via a Vagrant file 
 
 Opened Ports: 22, 80, 3306, 9200
 
-#####Dependecies
+#### Dependecies
 The PC that will be used to run these scripts should have vagrant installed.
 Vagrant can be downloaded from this link:
 https://www.vagrantup.com/downloads.html
 
-#####Use Case:
+#### Use Case:
 ```
 git clone https://github.com/sroutier/Laravel-Enterprise-Starter-Kit.git -b task_server_provision_automation
 cd task_server_provision_automation
