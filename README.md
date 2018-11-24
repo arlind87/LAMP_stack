@@ -20,10 +20,12 @@ Vagrant can be downloaded from this link:
 https://www.vagrantup.com/downloads.html
 
 #### Use Case:
+To perform this task you will need to clone this repo and just run the script "AllinOne.sh" in the repository folder.
+
 ```
-git clone https://github.com/sroutier/Laravel-Enterprise-Starter-Kit.git -b task_server_provision_automation
-cd task_server_provision_automation
-./AllinOne.sh
+1. git clone https://github.com/sroutier/Laravel-Enterprise-Starter-Kit.git -b task_server_provision_automation
+2. cd task_server_provision_automation
+3. ./AllinOne.sh
 ```
 By default the vagrant Box will be build using virtualbox.
 If you want to change the virtualization provider to hyperv just add to the vagrant up command in "AllinOne.sh" script below line:
