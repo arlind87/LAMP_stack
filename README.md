@@ -10,7 +10,7 @@ Based on the provided Info we have 8 servers in Total. For DB servers I will ass
 
 
                                                   HL Diagram
-                                               -----------------
+                                              -----------------
 
 				                  -----------------
 					          | Load Balancer |
@@ -21,9 +21,9 @@ Based on the provided Info we have 8 servers in Total. For DB servers I will ass
                   |                  |                    |                   |                   |
            --------------     --------------      --------------      --------------      --------------
            | Web Server |     | Web Server |      | Web Server |      | Web Server |      | Web Server |
-	   --------------     --------------      --------------      --------------      --------------
+	       --------------     --------------      --------------      --------------      --------------
                   |                  |                    |                   |                   |
-		  |		     |                    |                   |                   |
+	    	  |		     |                    |                   |                   |
                   ---------------------------------------------------------------------------------
 				                          |
 		                          Write    -----------------    Read
