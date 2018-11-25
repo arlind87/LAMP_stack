@@ -19,7 +19,7 @@ The PC that will be used to run these scripts should have vagrant installed.
 Vagrant can be downloaded from this link:
 https://www.vagrantup.com/downloads.html
 
-#### Use Case:
+#### Use Case when using branch in git:
 To perform this task you will need to clone this repo and just run the script "AllinOne.sh" in the repository folder.
 
 ```
